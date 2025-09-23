@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgro6d467pnpd"]
+
+[ext_resource type="Script" uid="uid://bgwehkgdgv0ue" path="res://other/DebugPanel.cs" id="1_5y548"]
+
+[node name="DebugPanel" type="Node2D" node_paths=PackedStringArray("codeLine")]
+script = ExtResource("1_5y548")
+codeLine = NodePath("LineEdit")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+visible = false
+offset_left = 17.0
+offset_top = 605.0
+offset_right = 608.0
+offset_bottom = 636.0
+placeholder_text = "enter code"

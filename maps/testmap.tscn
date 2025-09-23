@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2xabcyirlw5v"]
+
+[ext_resource type="PackedScene" uid="uid://sixwcl0wu06i" path="res://player/player.tscn" id="1_ng1ul"]
+[ext_resource type="PackedScene" uid="uid://cyvges3pb4sw3" path="res://player/helper.tscn" id="2_7ng1a"]
+[ext_resource type="PackedScene" uid="uid://cgro6d467pnpd" path="res://other/debug_panel.tscn" id="3_7ng1a"]
+
+[node name="testmap" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_ng1ul")]
+position = Vector2(121, 34)
+
+[node name="friend" parent="." instance=ExtResource("2_7ng1a")]
+position = Vector2(53, 78)
+
+[node name="friend2" parent="." instance=ExtResource("2_7ng1a")]
+position = Vector2(146, 69)
+
+[node name="DebugPanel" parent="." node_paths=PackedStringArray("map") instance=ExtResource("3_7ng1a")]
+map = NodePath("..")
