@@ -8,6 +8,9 @@ public partial class UserControl : Node2D
     [Export] private Player _player;
 
     private List<Helper> _friends = [];
+    
+    public bool AlwaysFormation = false;
+    public double Tickrate = 0, NeedRate = 0.25;
 
     public override void _Input(InputEvent @event)
     {
@@ -17,12 +20,21 @@ public partial class UserControl : Node2D
             _friends = [];
             foreach (var sons in daddy.GetChildren())
                 if (sons is Helper helper) AddFriend(helper);
-          
         }
-
         if (@event is InputEventKey { Keycode: Key.E})
-        {
             SetFormation(_friends.Count-1);
+        if (@event is InputEventKey { Keycode: Key.R})
+            AlwaysFormation = !AlwaysFormation;
+    }
+
+    public override void _Process(double delta)
+    {
+        Tickrate += delta;
+        if (AlwaysFormation && Tickrate > NeedRate)
+        {
+            GD.Print("Tickrate > " + Tickrate);
+            Tickrate = 0;
+            SetFormation(_friends.Count - 1);
         }
     }
 

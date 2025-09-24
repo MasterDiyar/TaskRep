@@ -19,3 +19,7 @@ texture = ExtResource("1_oul6g")
 
 [node name="userControl" parent="." node_paths=PackedStringArray("_player") instance=ExtResource("3_g1dw6")]
 _player = NodePath("..")
+
+[node name="hand" type="Node2D" parent="."]
+z_index = -1
+position = Vector2(8, 0)

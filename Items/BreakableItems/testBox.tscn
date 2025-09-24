@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cydrfjxdi66t7"]
+
+[ext_resource type="Texture2D" uid="uid://d275ycuk1figd" path="res://images/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="1_psadj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4kd4"]
+size = Vector2(26, 26)
+
+[node name="testBox" type="StaticBody2D"]
+texture_filter = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_y4kd4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_psadj")
+region_enabled = true
+region_rect = Rect2(256, 384, 32, 32)

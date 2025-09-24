@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using Godot;
 
 namespace fptest.weapon;
 
-public abstract class Weapon
+public abstract partial class Weapon: Sprite2D
 {
     public abstract string Name { get; }
     public abstract float Damage { get; set; }
