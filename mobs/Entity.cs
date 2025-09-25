@@ -1,8 +1,11 @@
+using System.Collections.Generic;
+using fptest.player;
+using fptest.weapon;
 using Godot;
 
 namespace fptest.mobs;
 
-public partial class Entity : RigidBody2D
+public partial class Entity : RigidBody2D, IEntity
 {
     public float MaxHp { get; }
     public float Hp {get; }
@@ -33,6 +36,11 @@ public partial class Entity : RigidBody2D
     {
         
     }
-    
 
+    public virtual void GetDamage(float damage, List<WeaponMod> Mods)
+    {
+        
+    }
+
+    public int Team { get; }
 }

@@ -1,7 +1,10 @@
 using Godot;
 using System;
+using System.Collections.Generic;
+using fptest.player;
+using fptest.weapon;
 
-public partial class Player : CharacterBody2D
+public partial class Player : CharacterBody2D, IEntity
 {
 	public override void _Ready()
 	{
@@ -22,5 +25,11 @@ public partial class Player : CharacterBody2D
 		if (Input.IsActionPressed("d")){dir += Vector2.Right;}
 		
 		Position += (dir.Length() > 0) ? dir.Normalized()*Speed*delta : Vector2.Zero;
+	}
+
+	public int Team { get; }
+	public void GetDamage(float damage, List<WeaponMod> Mods)
+	{
+        
 	}
 }
