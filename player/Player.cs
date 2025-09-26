@@ -6,6 +6,8 @@ using fptest.weapon;
 
 public partial class Player : CharacterBody2D, IEntity
 {
+	float Speed = 300;
+	public int Team { get; } = 1;
 	public override void _Ready()
 	{
 		
@@ -15,7 +17,7 @@ public partial class Player : CharacterBody2D, IEntity
 	{
 		Move((float)delta);
 	}
-	float Speed = 300;
+	
 	private void Move(float delta)
 	{
 		Vector2 dir = Vector2.Zero;
@@ -27,9 +29,11 @@ public partial class Player : CharacterBody2D, IEntity
 		Position += (dir.Length() > 0) ? dir.Normalized()*Speed*delta : Vector2.Zero;
 	}
 
-	public int Team { get; }
+	
 	public void GetDamage(float damage, List<WeaponMod> Mods)
 	{
         
 	}
+
+	
 }

@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://dou22c25q2qa2"]
+
+[ext_resource type="Texture2D" uid="uid://co05u3wnkx4mw" path="res://images/DiyarWeapon/sword-basic-swing1.png" id="1_sdp4x"]
+[ext_resource type="Texture2D" uid="uid://c6l6erux7jelj" path="res://images/DiyarWeapon/sword-basic-swing2.png" id="2_60uv7"]
+[ext_resource type="Texture2D" uid="uid://cl7xyhjlioby5" path="res://images/DiyarWeapon/sword-basic-swing3.png" id="3_v7iqb"]
+[ext_resource type="Texture2D" uid="uid://ckl8b220ebqoi" path="res://images/DiyarWeapon/sword-basic-swing4.png" id="4_s6oew"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jmp8r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sdp4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_60uv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v7iqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s6oew")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4non"]
+radius = 18.490381
+height = 66.961525
+
+[node name="Area2D" type="Area2D"]
+texture_filter = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jmp8r")
+frame_progress = 0.99395233
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 0)
+rotation = 0.5235988
+shape = SubResource("CapsuleShape2D_k4non")
