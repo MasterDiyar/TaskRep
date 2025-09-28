@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://mxa1p1tjnq5g"]
+[gd_scene load_steps=3 format=3 uid="uid://mxa1p1tjnq5g"]
 
 [ext_resource type="Texture2D" uid="uid://d275ycuk1figd" path="res://images/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="1_b71pq"]
+[ext_resource type="Script" uid="uid://vs54ys200of5" path="res://weapon/Swords/Swords.cs" id="2_813q8"]
 
-[node name="#1TransparentIcons" type="Sprite2D"]
+[node name="IsWORD" type="Sprite2D"]
 texture_filter = 3
 texture = ExtResource("1_b71pq")
 region_enabled = true
 region_rect = Rect2(32, 160, 32, 32)
+script = ExtResource("2_813q8")

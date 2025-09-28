@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using fptest.mobs;
+using fptest.player;
 using fptest.weapon.consumable;
 
 namespace fptest.weapon.Swords;
@@ -16,16 +18,31 @@ public partial class Swords : Weapon
 
     public override void _Ready()
     {
-        if (GetParent().GetParent() is Player player)
-            
+        Node Parent = GetParent().GetParent();
+        switch (Parent)
+        {
+            case Player player:
+                Damage += player.Damage;
+                break;
+            case Entity entity:
+                Damage += entity.Damage;
+                break;
+        }
+    }
+
+    public override void _Process(double delta)
+    {
+        if (Input.IsActionJustPressed("lm"))Attack();
     }
 
     public override void Attack()
     { 
       var swing = GD.Load<PackedScene>("res://weapon/consumable/mediumSwing.tscn").Instantiate<Swing>();
       swing.Damage = Damage;
-      
-      
+      swing.Parent = GetParent().GetParent() as IEntity;
+      swing.Position = GlobalPosition;
+      swing.LifeTime = 0.3f;
+      GetParent().GetParent().GetParent().GetParent().AddChild(swing);
     }
 
     public override void Reload()

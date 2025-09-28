@@ -6,5 +6,5 @@ namespace fptest.player;
 public interface IEntity
 {
     void GetDamage(float damage, List<WeaponMod> weapons);
-    int Team { get; }
+    int Team { get; set; }
 }

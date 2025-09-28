@@ -9,15 +9,19 @@
 
 [node name="player" parent="." instance=ExtResource("1_ng1ul")]
 position = Vector2(121, 34)
+motion_mode = 1
 
 [node name="friend" parent="." instance=ExtResource("2_7ng1a")]
 position = Vector2(53, 78)
 
 [node name="friend2" parent="." instance=ExtResource("2_7ng1a")]
 position = Vector2(146, 69)
+freeze = true
 
 [node name="DebugPanel" parent="." node_paths=PackedStringArray("map") instance=ExtResource("3_7ng1a")]
 map = NodePath("..")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("4_d7x8f")]
 position = Vector2(319, 148)
+gravity_scale = 1.0
+freeze = true

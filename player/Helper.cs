@@ -5,7 +5,13 @@ using fptest.mobs;
 public partial class Helper : Entity
 {
 	State state = State.GO;
-	
+
+	public override void _Ready()
+	{
+		Speed = 10;
+		Hp = 20;
+	}
+
 	public override void _Process(double delta)
 	{
 		switch (state)
@@ -22,6 +28,7 @@ public partial class Helper : Entity
 			case State.IDLE:
 				break;
 			case State.HEAL:
+				Hp += 10;
 				break;
 		}
 	}

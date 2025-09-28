@@ -7,11 +7,12 @@ namespace fptest.mobs;
 
 public partial class Entity : RigidBody2D, IEntity
 {
-    public float MaxHp { get; }
-    public float Hp {get; }
-    public float Damage { get; }
+    public float MaxHp { get;set; }
+    public float Hp {get; set;}
+    public float Damage { get; set;}
     public Vector2 goPos = Vector2.Zero;
-    public float Speed { get; }
+    public float Speed { get; set; }
+
     public enum State
     {
         GO,
@@ -42,5 +43,5 @@ public partial class Entity : RigidBody2D, IEntity
         
     }
 
-    public int Team { get; }
+    public int Team { get; set; }
 }

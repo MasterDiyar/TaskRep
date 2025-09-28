@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using fptest.Items;
 using fptest.player;
 
 namespace fptest.weapon.consumable;
@@ -14,22 +16,31 @@ public partial class Swing : Area2D
     [Export]public AnimatedSprite2D Sprite { get; set; }
     [Export]public AudioStreamPlayer2D Audio { get; set; }
     [Export]public Timer Timer { get; set; }
+    public List<WeaponMod> avaliableMods;
     
     public override void _Ready()
     {
         Timer.WaitTime = LifeTime;
         BodyEntered += OnBodyEntered;
         
-        Begin.Run();
-        Timer.Timeout += () => {End.Run(); QueueFree();};
+        Sprite.Play();
+        Timer.Start();
+
+        Begin?.Run();
+        Timer.Timeout += () => {End?.Run(); QueueFree();};
     }
 
     public void OnBodyEntered(Node2D body)
     {
         if (body is not IEntity entity) return;
         if (entity.Team == Parent.Team) return;
+
+        GD.Print("OnBodyEntered ", body.GetClass());
         
-        
+        if (body is BreakableItem item)
+        {
+            item.GetDamage(Damage, avaliableMods);
+        }
         
     }
 }

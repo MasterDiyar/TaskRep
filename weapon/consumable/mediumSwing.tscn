@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dou22c25q2qa2"]
+[gd_scene load_steps=8 format=3 uid="uid://dou22c25q2qa2"]
 
+[ext_resource type="Script" uid="uid://dnjpnd6pvlkv7" path="res://weapon/consumable/MediumSwing.cs" id="1_60uv7"]
 [ext_resource type="Texture2D" uid="uid://co05u3wnkx4mw" path="res://images/DiyarWeapon/sword-basic-swing1.png" id="1_sdp4x"]
 [ext_resource type="Texture2D" uid="uid://c6l6erux7jelj" path="res://images/DiyarWeapon/sword-basic-swing2.png" id="2_60uv7"]
 [ext_resource type="Texture2D" uid="uid://cl7xyhjlioby5" path="res://images/DiyarWeapon/sword-basic-swing3.png" id="3_v7iqb"]
@@ -17,26 +18,33 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_v7iqb")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": ExtResource("4_s6oew")
 }],
 "loop": true,
 "name": &"default",
-"speed": 8.0
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4non"]
-radius = 18.490381
+radius = 19.75943
 height = 66.961525
 
-[node name="Area2D" type="Area2D"]
+[node name="swing" type="Area2D" node_paths=PackedStringArray("Sprite", "Timer")]
 texture_filter = 3
+script = ExtResource("1_60uv7")
+Sprite = NodePath("AnimatedSprite2D")
+Timer = NodePath("Timer")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+skew = 0.39618975
 sprite_frames = SubResource("SpriteFrames_jmp8r")
-frame_progress = 0.99395233
+frame_progress = 0.49848902
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 0)
+position = Vector2(2, 0)
 rotation = 0.5235988
+skew = 0.2268928
 shape = SubResource("CapsuleShape2D_k4non")
+
+[node name="Timer" type="Timer" parent="."]
