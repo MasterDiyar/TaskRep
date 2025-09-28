@@ -28,7 +28,8 @@ public partial class DebugPanel : Node2D
 			case "add":
 				GD.Print("Adding " + blocks[1]);
 				if (blocks[1].Equals("helper"))
-					map.AddChild(GD.Load<PackedScene>("res://player/helper.tscn").Instantiate());
+					for (int i = 0; i < blocks[2].ToInt(); i ++)
+						map.AddChild(GD.Load<PackedScene>("res://player/helper.tscn").Instantiate());
 				break;
 			case "remove":
 				if (blocks[1].Equals("helper")) {

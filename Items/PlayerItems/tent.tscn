@@ -1,0 +1,126 @@
+[gd_scene load_steps=29 format=3 uid="uid://pvg2eqwkths2"]
+
+[ext_resource type="Texture2D" uid="uid://dd0e5lfxtxgd6" path="res://images/DiyarWeapon/tent/tent1.png" id="1_jhaup"]
+[ext_resource type="Script" uid="uid://d2raurgvo21x7" path="res://Items/PlayerItems/Tent.cs" id="1_q5pxh"]
+[ext_resource type="Texture2D" uid="uid://caigukwya88qd" path="res://images/DiyarWeapon/tent/tent2.png" id="2_q5pxh"]
+[ext_resource type="Texture2D" uid="uid://cwl3bomjcor3d" path="res://images/DiyarWeapon/tent/tent3.png" id="3_8q01u"]
+[ext_resource type="Texture2D" uid="uid://6r2wng8fld6c" path="res://images/DiyarWeapon/tent/tent4.png" id="4_nih0i"]
+[ext_resource type="Texture2D" uid="uid://drhyrm2m7wj7t" path="res://images/DiyarWeapon/tent/tent5.png" id="5_hh05x"]
+[ext_resource type="Texture2D" uid="uid://4e8qapfa66pp" path="res://images/DiyarWeapon/tent/tent6.png" id="6_pyrmt"]
+[ext_resource type="Texture2D" uid="uid://xqixytsphtot" path="res://images/DiyarWeapon/tent/tent7.png" id="7_7v5el"]
+[ext_resource type="Texture2D" uid="uid://dae4k806rf60" path="res://images/DiyarWeapon/tent/tent8.png" id="8_nll53"]
+[ext_resource type="Texture2D" uid="uid://d1n8r4k2fjnmg" path="res://images/DiyarWeapon/tent/tent9.png" id="9_ix7k4"]
+[ext_resource type="Texture2D" uid="uid://dwr0hp1tj42s7" path="res://images/DiyarWeapon/tent/tent10.png" id="10_a57xj"]
+[ext_resource type="Texture2D" uid="uid://cuchk8m0krwa2" path="res://images/DiyarWeapon/tent/tent11.png" id="11_0dvva"]
+[ext_resource type="Texture2D" uid="uid://mfp1fsnonrqm" path="res://images/DiyarWeapon/tent/tent12.png" id="12_ilxyq"]
+[ext_resource type="Texture2D" uid="uid://d1gnf8uy58834" path="res://images/DiyarWeapon/tent/tent13.png" id="13_2fumk"]
+[ext_resource type="Texture2D" uid="uid://bacppjamsk7yl" path="res://images/DiyarWeapon/tent/tent14.png" id="14_txxt1"]
+[ext_resource type="Texture2D" uid="uid://djrc53n1c0k6p" path="res://images/DiyarWeapon/tent/tent15.png" id="15_s3rro"]
+[ext_resource type="Texture2D" uid="uid://lkl1todvc27y" path="res://images/DiyarWeapon/tent/tent16.png" id="16_73xeo"]
+[ext_resource type="Texture2D" uid="uid://b6pvcagvcw0ur" path="res://images/DiyarWeapon/tent/tent17.png" id="17_awotg"]
+[ext_resource type="Texture2D" uid="uid://cdmq74hgjp0hn" path="res://images/DiyarWeapon/tent/tent18.png" id="18_j2fu4"]
+[ext_resource type="Texture2D" uid="uid://deqloegw7gw4d" path="res://images/DiyarWeapon/tent/tent19.png" id="19_oull3"]
+[ext_resource type="Texture2D" uid="uid://cmvog7xq8ag46" path="res://images/DiyarWeapon/tent/tent20.png" id="20_tw6s8"]
+[ext_resource type="Texture2D" uid="uid://h5lkrs3a55fs" path="res://images/DiyarWeapon/tent/tent21.png" id="21_l432g"]
+[ext_resource type="Texture2D" uid="uid://ckbqqaqgy1u6g" path="res://images/DiyarWeapon/tent/tent22.png" id="22_xd56l"]
+[ext_resource type="Texture2D" uid="uid://b86arm5562bk6" path="res://images/DiyarWeapon/tent/tent23.png" id="23_5gu70"]
+[ext_resource type="Texture2D" uid="uid://dy418fcdo2edm" path="res://images/DiyarWeapon/tent/tent24.png" id="24_n087y"]
+[ext_resource type="Texture2D" uid="uid://dfnxocx0m5xkj" path="res://images/DiyarWeapon/tent/tent25.png" id="25_4docv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y8t1i"]
+radius = 64.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mmfd6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jhaup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q5pxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8q01u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nih0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hh05x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pyrmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7v5el")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nll53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ix7k4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a57xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0dvva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ilxyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2fumk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_txxt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_s3rro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_73xeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_awotg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_j2fu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_oull3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_tw6s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_l432g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xd56l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5gu70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_n087y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_4docv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Tent" type="RigidBody2D"]
+texture_filter = 3
+script = ExtResource("1_q5pxh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_y8t1i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(12, 3)
+sprite_frames = SubResource("SpriteFrames_mmfd6")
+frame_progress = 0.34193587

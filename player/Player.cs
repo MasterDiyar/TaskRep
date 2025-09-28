@@ -6,7 +6,7 @@ using fptest.weapon;
 
 public partial class Player : CharacterBody2D, IEntity
 {
-	float Speed = 300;
+	float Speed = 30;
 	public float Damage = 10;
 	public int Team { get; set; } = 1;
 	public override void _Ready()

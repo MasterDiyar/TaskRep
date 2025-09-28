@@ -21,9 +21,13 @@ public partial class UserControl : Node2D
             foreach (var sons in daddy.GetChildren())
                 if (sons is Helper helper) AddFriend(helper);
         }
-        if (@event is InputEventKey { Keycode: Key.E})
-            SetFormation(_friends.Count-1);
-        if (@event is InputEventKey { Keycode: Key.R})
+
+        if (@event is InputEventKey { Keycode: Key.E })
+            foreach (var friend in _friends)
+                friend.SearchHeal();
+            
+        
+        if (@event is InputEventKey { Keycode: Key.R, Pressed: true })
             AlwaysFormation = !AlwaysFormation;
     }
 
@@ -59,6 +63,7 @@ public partial class UserControl : Node2D
                 int fCount = _friends.Count;
                 for (var i = 0; i < fCount; i++)
                 {
+                    _friends[i].SetState(0);
                     _friends[i].GoTo(_player.GlobalPosition + 50 *new Vector2(Mathf.Cos(Mathf.Pi*2 * i /fCount), Mathf.Sin(Mathf.Pi*2 * i /fCount)));
                 }
                 break;
