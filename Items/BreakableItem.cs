@@ -7,9 +7,10 @@ using Godot;
 
 public partial class BreakableItem:RigidBody2D, IEntity
 {
-    protected float Hp=0;
+    public float Hp { get; set; } = 0;
     public int Team { get; set; } = 1024;
     [Export]public float MaxHp { get; set; }
+    
 
     public override void _Ready()
     {

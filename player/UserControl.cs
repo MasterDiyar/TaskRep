@@ -36,10 +36,11 @@ public partial class UserControl : Node2D
         Tickrate += delta;
         if (AlwaysFormation && Tickrate > NeedRate)
         {
-            GD.Print("Tickrate > " + Tickrate);
             Tickrate = 0;
             SetFormation(_friends.Count - 1);
         }
+        
+        Move((float)delta);
     }
 
     public void AddFriend(Helper friend)
@@ -71,7 +72,16 @@ public partial class UserControl : Node2D
         }
     }
     
-    
+    private void Move(float delta)
+    {
+        Vector2 dir = Vector2.Zero;
+        if (Input.IsActionPressed("w")){dir += Vector2.Up;}
+        if (Input.IsActionPressed("s")){dir += Vector2.Down;}
+        if (Input.IsActionPressed("a")){dir += Vector2.Left;}
+        if (Input.IsActionPressed("d")){dir += Vector2.Right;}
+		
+        _player.Position += (dir.Length() > 0) ? dir.Normalized()*_player.Speed*delta : Vector2.Zero;
+    }
     
     
     

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpkl5wpbfpgco"]
+
+[ext_resource type="Script" uid="uid://c44w0inki0x25" path="res://mobs/HpDrawLine.cs" id="1_duly8"]
+
+[node name="HpDrawLine" type="Node2D"]
+script = ExtResource("1_duly8")
