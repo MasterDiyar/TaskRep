@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://sixwcl0wu06i"]
+[gd_scene load_steps=7 format=3 uid="uid://sixwcl0wu06i"]
 
 [ext_resource type="Texture2D" uid="uid://b7whim60h7gbf" path="res://icon.svg" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://fa5egonmav7n" path="res://player/Player.cs" id="1_rkbax"]
 [ext_resource type="PackedScene" uid="uid://cppj1klrk0at0" path="res://player/userControl.tscn" id="3_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://mxa1p1tjnq5g" path="res://weapon/iron_sword.tscn" id="4_yw30f"]
+[ext_resource type="PackedScene" uid="uid://c5ocoqo8dao4k" path="res://player/player_gui.tscn" id="5_qjkh3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
 
@@ -26,3 +27,5 @@ z_index = -1
 position = Vector2(8, 0)
 
 [node name="#1TransparentIcons" parent="hand" instance=ExtResource("4_yw30f")]
+
+[node name="PlayerGUI" parent="." instance=ExtResource("5_qjkh3")]

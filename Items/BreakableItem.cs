@@ -22,7 +22,7 @@ public partial class BreakableItem:RigidBody2D, IEntity
         GD.Print("Taking damage: " + damage);
         Hp -= damage;
         GD.Print("Hp: " + Hp);
-        if (Hp < 0) QueueFree();
+        if (Hp <= 0) QueueFree();
     }
     
 }

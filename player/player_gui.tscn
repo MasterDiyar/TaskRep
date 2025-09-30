@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5ocoqo8dao4k"]
+
+[ext_resource type="Script" uid="uid://bf7vlfbotrfd8" path="res://player/PlayerGui.cs" id="1_lsxe6"]
+[ext_resource type="Texture2D" uid="uid://813exh7talss" path="res://images/DiyarWeapon/ui/lol.png" id="2_ksa3e"]
+[ext_resource type="Texture2D" uid="uid://sfehgokvlmkv" path="res://images/DiyarWeapon/ui/uiBar.png" id="2_m0cjy"]
+[ext_resource type="LabelSettings" uid="uid://b2tkq45l0igg0" path="res://other/justSave.tres" id="3_ksa3e"]
+[ext_resource type="Texture2D" uid="uid://cvswsnjtyimja" path="res://images/DiyarWeapon/ui/uiEmpty.png" id="3_qlpxf"]
+
+[node name="PlayerGUI" type="CanvasLayer"]
+script = ExtResource("1_lsxe6")
+
+[node name="LeftUp" type="Control" parent="."]
+texture_filter = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1677.0
+offset_bottom = -986.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lol" type="Sprite2D" parent="LeftUp"]
+z_index = -7
+position = Vector2(128, 64)
+texture = ExtResource("2_ksa3e")
+
+[node name="StaminaLine" type="Line2D" parent="LeftUp"]
+points = PackedVector2Array(50, 85, 200, 85)
+default_color = Color(1, 1, 0.8392157, 1)
+
+[node name="UiEmpty" type="Sprite2D" parent="LeftUp"]
+clip_children = 1
+z_index = -7
+texture = ExtResource("3_qlpxf")
+centered = false
+
+[node name="ManaLine" type="Line2D" parent="LeftUp/UiEmpty"]
+points = PackedVector2Array(50, 64, 205, 64, 225, 44)
+width = 25.0
+default_color = Color(0.5921569, 0.84705883, 0.85490197, 1)
+
+[node name="HpLine" type="Line2D" parent="LeftUp"]
+points = PackedVector2Array(50, 35, 240, 35)
+width = 30.0
+default_color = Color(0.76020277, 3.706068e-06, 4.813075e-07, 1)
+
+[node name="UiBar" type="Sprite2D" parent="LeftUp"]
+texture = ExtResource("2_m0cjy")
+centered = false
+
+[node name="HpIndex" type="Label" parent="LeftUp"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 21.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "10/10"
+label_settings = ExtResource("3_ksa3e")
+
+[node name="ManaIndex" type="Label" parent="LeftUp"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 49.0
+offset_right = 117.0
+offset_bottom = 77.0
+text = "10/10"
+label_settings = ExtResource("3_ksa3e")
+
+[node name="StaminaIndex" type="Label" parent="LeftUp"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 77.0
+offset_right = 108.0
+offset_bottom = 105.0
+scale = Vector2(0.5, 0.5)
+text = "10/10"
+label_settings = ExtResource("3_ksa3e")

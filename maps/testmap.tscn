@@ -20,7 +20,7 @@ position = Vector2(53, 78)
 position = Vector2(146, 69)
 
 [node name="DebugPanel" parent="UNITS" node_paths=PackedStringArray("map") instance=ExtResource("3_7ng1a")]
-map = NodePath("../..")
+map = NodePath("..")
 
 [node name="StaticBody2D" parent="UNITS" instance=ExtResource("4_d7x8f")]
 position = Vector2(319, 148)

@@ -12,10 +12,18 @@ public partial class Player : CharacterBody2D, IEntity
 
 	public float MaxHp { get; set; } = 20;
 	public float Hp { get; set; }
+	
+	public float MaxMp { get; set; } = 20;
+	public float Mp;
 
+	public float MaxStamina { get; set; } = 20;
+	public float Stamina;
+	
 	public override void _Ready()
 	{
-		
+		Hp = MaxHp;
+		Mp = MaxMp;
+		Stamina = MaxStamina;
 	}
 
 	public override void _Process(double delta)
@@ -26,9 +34,9 @@ public partial class Player : CharacterBody2D, IEntity
 	
 
 	
-	public void GetDamage(float damage, List<WeaponMod> Mods)
+	public void GetDamage(float damage, List<WeaponMod> mods)
 	{
-        
+        Hp -= Mathf.Clamp(damage, 0, MaxHp);
 	}
 
 	
