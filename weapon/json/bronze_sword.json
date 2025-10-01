@@ -1,0 +1,8 @@
+{
+  "id": 2,
+  "name": "bronze sword",
+  "durability": 120,
+  "damage": 8,
+  "stamina": 5.2,
+  "path": "res://images/DiyarWeapon/weapon/iron_sword.png"
+}

@@ -4,4 +4,9 @@
     <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="weapon\json\bronze_sword.json" />
+    <Content Include="weapon\json\iron_sword.json" />
+    <Content Include="weapon\json\weapon_dict.json" />
+  </ItemGroup>
 </Project>

@@ -1,0 +1,8 @@
+{
+  "id": 1,
+  "name": "iron sword",
+  "durability": 200,
+  "damage": 10,
+  "stamina": 5,
+  "path": "res://images/DiyarWeapon/weapon/iron_sword.png"
+}
