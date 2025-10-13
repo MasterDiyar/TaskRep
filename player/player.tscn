@@ -1,12 +1,36 @@
-[gd_scene load_steps=7 format=3 uid="uid://sixwcl0wu06i"]
+[gd_scene load_steps=12 format=3 uid="uid://sixwcl0wu06i"]
 
 [ext_resource type="Texture2D" uid="uid://b7whim60h7gbf" path="res://icon.svg" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://fa5egonmav7n" path="res://player/Player.cs" id="1_rkbax"]
 [ext_resource type="PackedScene" uid="uid://cppj1klrk0at0" path="res://player/userControl.tscn" id="3_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://mxa1p1tjnq5g" path="res://weapon/iron_sword.tscn" id="4_yw30f"]
 [ext_resource type="PackedScene" uid="uid://c5ocoqo8dao4k" path="res://player/player_gui.tscn" id="5_qjkh3"]
+[ext_resource type="Texture2D" uid="uid://bpe2p8j8ggqyt" path="res://player/exileplay/exiler1.png" id="6_hg6s5"]
+[ext_resource type="Texture2D" uid="uid://ctojucen1sw88" path="res://player/exileplay/exiler2.png" id="7_8t03j"]
+[ext_resource type="Texture2D" uid="uid://dqoi147bnhekg" path="res://player/exileplay/exiler3.png" id="8_2ieo8"]
+[ext_resource type="Texture2D" uid="uid://bmnvhfcm3wubf" path="res://player/exileplay/exiler4.png" id="9_ebec5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yllr7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hg6s5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8t03j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2ieo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ebec5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="player" type="CharacterBody2D"]
 texture_filter = 3
@@ -16,6 +40,7 @@ script = ExtResource("1_rkbax")
 shape = SubResource("RectangleShape2D_rkbax")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_oul6g")
 
@@ -23,9 +48,13 @@ texture = ExtResource("1_oul6g")
 _player = NodePath("..")
 
 [node name="hand" type="Node2D" parent="."]
-z_index = -1
-position = Vector2(12, -6)
+position = Vector2(5, 7)
 
 [node name="#1TransparentIcons" parent="hand" instance=ExtResource("4_yw30f")]
+z_index = 1
 
 [node name="PlayerGUI" parent="." instance=ExtResource("5_qjkh3")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_yllr7")

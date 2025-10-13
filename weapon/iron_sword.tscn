@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://mxa1p1tjnq5g"]
 
 [ext_resource type="Texture2D" uid="uid://camp8heapuxxk" path="res://images/DiyarWeapon/weapon/iron_sword.png" id="1_813q8"]
-[ext_resource type="Script" uid="uid://vs54ys200of5" path="res://weapon/Swords/Swords.cs" id="2_813q8"]
+[ext_resource type="Script" uid="uid://boeukjuvh22ef" path="res://weapon/Swords/IronSword.cs" id="2_813q8"]
 
 [node name="IsWORD" type="Sprite2D"]
 texture_filter = 3
 texture = ExtResource("1_813q8")
+offset = Vector2(10, -10)
 script = ExtResource("2_813q8")

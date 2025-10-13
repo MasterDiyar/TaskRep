@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmf2tmec7f8hi"]
+
+[ext_resource type="Texture2D" uid="uid://tfo6v7owhu8o" path="res://images/DiyarWeapon/ui/bar.png" id="1_2y1p2"]
+[ext_resource type="Script" uid="uid://w17vnrila6s2" path="res://player/inventar/InventorySlot.cs" id="1_3gd2j"]
+
+[node name="Bar" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_2y1p2")
+script = ExtResource("1_3gd2j")

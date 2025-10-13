@@ -1,8 +1,12 @@
 {
   "id": 1,
   "name": "iron sword",
-  "durability": 200,
-  "damage": 10,
-  "stamina": 5,
+  "durability": 196,
+  "damage": 8,
+  "stamina": 5.2,
+  "attackSpeed": 0.5,
+  "range": 0,
+  "crit": 20,
+  "pierce": 5,
   "path": "res://images/DiyarWeapon/weapon/iron_sword.png"
 }

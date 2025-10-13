@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://cr5fr3o80nvf4"]
+[gd_scene load_steps=3 format=3 uid="uid://cr5fr3o80nvf4"]
+
+[ext_resource type="Script" uid="uid://bbo648rcxq7iw" path="res://player/inventar/InventoryUI.cs" id="1_sqil7"]
+[ext_resource type="PackedScene" uid="uid://cmf2tmec7f8hi" path="res://player/inventar/bar.tscn" id="2_dpmf6"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
@@ -10,3 +13,23 @@ offset_top = 930.0
 offset_right = -1300.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_sqil7")
+
+[node name="Bar" parent="." instance=ExtResource("2_dpmf6")]
+layout_mode = 0
+
+[node name="Bar2" parent="." instance=ExtResource("2_dpmf6")]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 3.0
+offset_right = 480.0
+offset_bottom = 153.0
+SlotIndex = 2
+
+[node name="Bar3" parent="." instance=ExtResource("2_dpmf6")]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 2.0
+offset_right = 313.0
+offset_bottom = 152.0
+SlotIndex = 1
