@@ -9,6 +9,7 @@ public partial class InventorySlot: TextureRect
 
     public override void _Ready()
     {
+        Size = Vector2.One*150;
         _inventoryUI = GetParent<InventoryUI>();
         MouseFilter = MouseFilterEnum.Pass; // разрешает события мыши
     }
